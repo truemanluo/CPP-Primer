@@ -1,5 +1,6 @@
 #include "ch12.h"
 
+
 /**
  * 多个StrBlob对象共享相同的vector底层结构 
 **/
