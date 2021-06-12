@@ -1,4 +1,6 @@
-#include "12-1.h"
+#include "ch12.h"
+#include "StrBlob.h"
+#include "StrBlobPtr.h"
 
 /**
  * 多个StrBlob对象共享相同的vector底层结构 
@@ -31,28 +33,9 @@ string& StrBlob::front() {
 
 // 访问StrBlob的this指针
 StrBlobPtr StrBlob::begin() {
-    return StrBlobPtr();
+    return StrBlobPtr(*this);
 }
 
 StrBlobPtr StrBlob::end() {
-    return StrBlobPtr();
-}
-
-
-int main()
-{
-    initializer_list<string> s = {"luo", "qiu", "hong"};
-    StrBlob bl(s);
-    bl.push_back("test");
-    cout << "bl size:" << bl.size() << endl;
-
-    // StrBlob bl = new StrBlob(); 为什么是错的
-    const StrBlob bl2({"tianmao", "taobao"});
-    // bl2.push_back("hello"); // 错误，不能修改常量对象
-    cout << bl2.size() << endl;
-
-    StrBlob bl3 = bl;
-    bl3.push_back("test2");
-    cout << "bl size:" << bl.size() << endl;
-    return 0;
+    return StrBlobPtr(*this, data->size());
 }
