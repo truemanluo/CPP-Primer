@@ -27,7 +27,7 @@ Notes：
   ```
 
 - 以特定字符分割字符串
-  - `geline`中设置特定[分隔符](IO\split_by_special_delimeters.cpp)
+  - `geline`中设置特定[分隔符](split_by_special_delimeters.cpp)
   ```
     string line;
     int num;
