@@ -28,6 +28,7 @@ Notes：
 
 - 以特定字符分割字符串
   - `geline`中设置特定[分隔符](split_by_special_delimeters.cpp)
+  > 注意：只适合一行的情况
   ```
     string line;
     int num;
@@ -39,7 +40,7 @@ Notes：
         }
     }
   ```
-  
+
 
   - 使用string的`find`和`substr`方法（[stackoverflow](https://stackoverflow.com/questions/14265581/parse-split-a-string-in-c-using-string-delimiter-standard-c)）
     - `find`
