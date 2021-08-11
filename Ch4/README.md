@@ -9,7 +9,7 @@
     char *q = const_cahr<char*>(cp);
     ```
   - `reinterpret_cast`：为运算对象的位模式提供较低层次上的重新解释
-  - `dynamic_cast`
+  - `dynamic_cast`：[例子](../Ch19/type_cast.cpp)
     > 用于将基类的指针或引用安全地转化成派生类的指针或引用
 
     type必须是类类型。
